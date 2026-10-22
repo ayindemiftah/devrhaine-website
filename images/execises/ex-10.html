@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <style>
+    .verify{
+      border: 0;
+      padding: 15px 25px;
+      background-color: black;
+      color: white;
+      border-radius: 10px;
+      font-weight:bold ;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .is-toggled{
+      background-color: rgb(240, 240, 240);
+      color: black
+    }
+
+    .is-toggled{
+      background-color: rgb(240, 240, 240);
+      color: black
+    }
+
+ 
+
+    .adjunment{
+     background-color: rgb(240, 240, 240);
+     color: black
+    }
+
+     
+
+
+  </style>
+  <body>
+    <button class="action verify" onclick="
+      function1();
+      ">Gaming</button>
+
+     <button class="division verify" onclick="
+      function2 ();
+     ">Music</button>
+    
+     <button class="multiplication verify" onclick="
+     function3();
+     ">Tech</button>
+    <script>
+      function function1(){
+      const action = document.querySelector('.action');
+     if (action.classList.contains('is-toggled')){
+      action.classList.remove('is-toggled');
+     }else{
+      action.classList.add('is-toggled');
+     }
+      } 
+      function function2 (){
+      const allow= document.querySelector('.division')
+     if (allow.classList.contains('is-toggled')){
+      allow.classList.remove('is-toggled');
+     }else {
+      allow.classList.add('is-toggled');
+     }
+      }
+
+     function function3(){
+     const bongalo = document.querySelector('.multiplication')
+     if (bongalo.classList.contains('adjunment')){
+     bongalo.classList.remove('adjunment')
+     }else{
+      bongalo.classList.add('adjunment')
+     }
+     }
+    </script>
+  </body>
+</html>

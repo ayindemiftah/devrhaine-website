@@ -1,0 +1,74 @@
+  <!DOCTYPE html>
+  <html>
+    <head></head>
+    <body>
+      <script>
+        let above = false;
+       const myArray = ['hello','world', 'search', 'good', 'search']
+    for (let i =0; i<myArray.length; i++){
+      if (myArray[i] === 'search'){
+        console.log (i);
+        above = true;
+        break;
+      } 
+    }
+    if (!above){
+      console.log(-1);
+    }
+      </script>
+    </body>
+  </html>
+
+
+
+  
+
+
+
+  <!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+     
+  function removeEgg(foods){
+     let result = [];
+     let eggCount = 0;
+     let above = foods.slice().reverse();
+    for(let i= 0; i<above.length; i++){
+      if (above[i] === 'egg' && eggCount < 2){
+      eggCount ++;
+     continue;
+
+      } result.push(above[i])
+    }return result.reverse();
+  }
+  console.log (removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']))
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      for (let i= 1; i<= 20; i++){
+       if (i % 3 ===0 && i % 5 === 0){
+         console.log ('fizzbuzz');
+     }else if(i % 3 === 0){
+        console.log ('fizz');
+     }else if (i % 5 === 0){
+       console.log ('buzz')
+     } else {
+      console.log (i)
+     }
+      }
+    </script>
+   </body>
+</html>

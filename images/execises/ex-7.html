@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    <style>
+      span{
+        display: flex;
+        justify-content: center;
+      }
+      button{
+        display: flex;
+        margin:auto;
+      }
+    </style>
+    </head>
+    <body>
+      <span id="python">0</span>
+      <button id="swift">Add</button>
+
+      <script>
+        const adobe = document.getElementById ('python');
+        const mango = document.getElementById ('swift');
+        let pawpaw =0;
+
+       //  this line concerns, if you click tha add button what would happen, then compare first one b4 the second. 213
+        mango.addEventListener('click', function(){
+          pawpaw +=1;
+          adobe.textContent= pawpaw;
+        })
+      </script>
+     </script>
+  </body>
+</html>

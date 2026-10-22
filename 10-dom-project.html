@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM project</title>
+    <style>
+      
+      body{
+        font-family: Arial;
+      }
+
+      .subscribe-button{
+      border: 0;
+      padding: 10px 15px;
+      background-color: black;
+      color: white;
+      border-radius: 20px;
+      font-weight:bold ;
+      cursor: pointer;
+      margin-bottom: 30px;
+      }
+
+      .is-subscribed{
+       background-color: rgb(240, 240, 240);
+       color: black;
+      }
+
+      .cost-input{
+        font-size: 15px;
+        padding: 10px ;
+      }
+
+      .calculate-button{
+        padding: 12px 15px;
+        color:white;
+        background-color: green;
+        border: 0;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>  
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick="
+     subscribe();
+    " class="js-subscribe-button subscribe-button">subscribe</button>
+
+    <p>Amazon shipping calculator</p>
+    <input class="js-cost-input cost-input" placeholder="cost of order" onkeydown="
+     handleCostKeydown(event);
+    ">
+    
+    <button class="calculate-button"  onclick="
+     calculateTotal (event);
+     ">calculate</button>
+
+    <p class="resultDisplay"></p>
+   <script>
+    String(25);
+    console.log( '25' -5);
+    console.log( '25' +5);
+
+    window.document
+    window.console.log('window');
+    window.alert
+
+    function handleCostKeydown(){
+   
+      if (event.key === 'Enter'){
+      calculateTotal ();
+    }
+    }
+
+    function calculateTotal (){
+    const buttonElement=document.querySelector('.js-cost-input');
+     let cost = Number (buttonElement.value );
+ 
+
+     if (cost < 40){
+      cost +=10;
+    }
+     
+     document.querySelector('.resultDisplay')
+      .innerHTML=`$${cost}`;
+    }
+
+    function subscribe (){
+      const buttonElement =document.querySelector ('.js-subscribe-button');
+
+      if(buttonElement.innerText === 'subscribe'){
+        buttonElement.innerHTML =  'subscribed';
+        buttonElement.classList.add('is-subscribed');
+      }else{
+        buttonElement.innerHTML = 'subscribe';
+        buttonElement.classList.remove('is-subscribed');
+      }
+    }
+   </script>
+  </body>
+</html>
